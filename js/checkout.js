@@ -1,10 +1,42 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
+import {
+  getDatabase,
+  ref,
+  set,
+} from "https://www.gstatic.com/firebasejs/9.8.1/firebase-database.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCdTLLg3U72vWU3V6PnaYW8WN9y2rw70Ns",
+  authDomain: "shikher-foundations.firebaseapp.com",
+  databaseURL: "https://shikher-foundations-default-rtdb.firebaseio.com",
+  projectId: "shikher-foundations",
+  storageBucket: "shikher-foundations.appspot.com",
+  messagingSenderId: "48520475587",
+  appId: "1:48520475587:web:5941f4e0dc88e000378376",
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getDatabase();
+var fullname = document.getElementById("fullname");
+var phoneno = document.getElementById("phno");
+var address = document.getElementById("addr");
+var street = document.getElementById("street");
+var city = document.getElementById("city");
+var sndbtn = document.getElementById("senddata");
+
 var shopcart = [];
+var sndcart = [];
 $(document).ready(function () {
   outputCart();
+  snddata(shopcart);
   $("#output").on("change keyup", ".dynqua", function () {
     var iteminfo = $(this.dataset)[0];
     var itemincart = false;
-    console.log(shopcart);
     var qty = $(this).val();
     if (qty < 0) {
       qty = 0;
@@ -17,6 +49,7 @@ $(document).ready(function () {
       }
     });
     sessionStorage["sca"] = JSON.stringify(shopcart);
+
     outputCart();
   });
 
@@ -24,8 +57,6 @@ $(document).ready(function () {
     if (sessionStorage["sca"] != null) {
       shopcart = JSON.parse(sessionStorage["sca"].toString());
     }
-    console.log(sessionStorage["sca"]);
-    console.log(shopcart);
     var holderHTML = "";
     var total = 0;
     var itemCnt = 0;
@@ -72,3 +103,25 @@ $(document).ready(function () {
     return (n / 100).toFixed(2);
   }
 });
+
+function snddata(shopcart) {
+  window.sndcart = shopcart;
+}
+function senddata() {
+  set(ref(db, "Orders/" + fullname.value), {
+    cart: window.sndcart,
+    Name: fullname.value,
+    phone_number: phoneno.value,
+    Address: address.value,
+    Street: street.value,
+    City: city.value,
+  })
+    .then(() => {
+      alert("data added succesfully");
+    })
+    .catch((error) => {
+      alert("unsuccesful , error" + error);
+    });
+}
+
+sndbtn.addEventListener("click", senddata);

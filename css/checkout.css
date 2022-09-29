@@ -1,5 +1,10 @@
 @import url(donate.css  );
 
+body{
+    background-color: #fbeaeb99;
+}
+
+
 input[type="number"] {
     width: 20%;
 }
