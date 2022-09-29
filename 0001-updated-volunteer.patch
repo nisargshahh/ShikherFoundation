@@ -1,0 +1,173 @@
+From f7fe3e8424cd9d3eb64e6e9e7c66bff4bfb39b86 Mon Sep 17 00:00:00 2001
+From: Parth Shah <shahparth200212@gmail.com>
+Date: Fri, 13 May 2022 03:03:08 +0530
+Subject: [PATCH] updated volunteer
+
+---
+ css/home.css         |   4 +-
+ pages/volunteer.html | 127 +++++++++++++++++++++++++++++++------------
+ 2 files changed, 93 insertions(+), 38 deletions(-)
+
+diff --git a/css/home.css b/css/home.css
+index 3c5bf2d..ecaf2ab 100644
+--- a/css/home.css
++++ b/css/home.css
+@@ -1,5 +1,5 @@
+ @import url("donate.css");
+ 
+-.landing_page {
+-    margin-top: 300px;
++.infotext {
++    
+ }
+\ No newline at end of file
+diff --git a/pages/volunteer.html b/pages/volunteer.html
+index dfdae76..01268bf 100644
+--- a/pages/volunteer.html
++++ b/pages/volunteer.html
+@@ -1,40 +1,57 @@
+ <!DOCTYPE html>
++<html lang="en">
+ 
+-<html>
+-    <head>
+-        <meta charset="utf-8">
+-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+-        <title>Volunteer</title>
+-        <meta name="viewport" content="width=device-width, initial-scale=1">
+-    </head>
+-    <body>
+-        <div class="navbar">
++<head>
++    <meta charset="UTF-8">
++    <meta http-equiv="X-UA-Compatible" content="IE=edge">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>Donate</title>
++    <link rel="stylesheet" href="../css/volunteer.css">
++</head>
+ 
+-            <div class="shikher">
+-        
+-                <img src="logo.jpeg" >
+-        
+-            </div>
+-            <nav class ="main-nav">
+-                <ul>
+-    
+-                    <li><a href="home.html">Home</a></li>
+-                    <li><a href="about.html">About </a></li>
+-                    <li><a href="donate.html">Donate </a></li>
+-                    <li><a href="volunteer.html">Volunteer </a></li>
+-                    <li><a href="#">Events </a></li>
+-                    <li><a href="#">Shop</a></li>
+-                    <li><a href="login.html">Login</a></li>
+-                </ul>
+-            </nav>
++<body>
++    <div class="container">
++      <div class="navbar">
++        <a href="../index.html"><img src="../Shikher Foundations Logo 2021.png"
++            class="logo" /></a>
++        <nav class="nav">
++          <ul>
++            <li><a href="home.html">Home</a></li>
++            <li><a href="about.html">About </a></li>
++            <li><a href="donate.html">Donate </a></li>
++            <li><a href="volunteer.html">Volunteer </a></li>
++            <li><a href="events.html">Events </a></li>
++            <li><a href="shop.html">Shop</a></li>
++            <li><a href="login.html">Login</a></li>
++          </ul>
++        </nav>
++        <div class="menu" id="menu-btn">
++          <div class="bar1"></div>
++          <div class="bar2"></div>
++          <div class="bar3"></div>
+         </div>
++      </div>
++      <nav class="new-nav" id="mob-nav">
++        <ul class="ul-new-nav">
++          <li><a href="home.html">Home</a></li>
++          <li><a href="about.html">About </a></li>
++          <li><a href="donate.html">Donate </a></li>
++          <li><a href="volunteer.html">Volunteer </a></li>
++          <li><a href="events.html">Events </a></li>
++          <li><a href="shop.html">Shop</a></li>
++          <li><a href="login.html">Login</a></li>
++        </ul>
++      </nav>
+     
+             <h3>PLEASE FILL THIS FORM TO VOLUNTEER</h3>
+-            <hr />
+-            <div class="details">
+-            <label>Name</label>
+-            <input id ="fullname" type="text" class="input-box" placeholder="Full Name" />
+-            <br />
++            <div class="form-data">
++                <table>
++                  <tbody>
++                    <tr>
++                      <td>Full Name:</td>
++                      <td><input class="contact-us-text" id="fullname" type="text" placeholder="Enter your Full name"
++                      required></td>
++                    </tr>
+             
+             <label>Contact Number</label>
+             <input id ="conno" type="tel" class="input-box" placeholder="0123456789" size="10"/>
+@@ -57,8 +74,46 @@
+             <br />
+             <button id ="sendbtn">Volunteer</button>
+             
+-            <script type = "module" src = "../js/volunteer.js"></script>
+-                
+-    
+-    </body>
+-</html>
+\ No newline at end of file
++        <div class="footer">
++            <footer>
++              <div class="footdiv">
++                <div class="row justify-content-center">
++                  <div class="footer-col">
++                    <h3>Services</h3>
++                    <ul>
++                      <li><a href="#">about us</a></li>
++                      <li><a href="#">our services</a></li>
++                      <li><a href="#">privacy policy</a></li>
++                      <li><a href="#">affiliate program</a></li>
++                    </ul>
++                  </div>
++                  <div class="footer-col">
++                    <h3>About</h3>
++                    <ul>
++                      <li><a href="#">FAQ</a></li>
++                      <li><a href="#">shipping</a></li>
++                      <li><a href="#">returns</a></li>
++                      <li><a href="#">payment options</a></li>
++                    </ul>
++                  </div>
++                  <div class="footer-col">
++                    <h3>Socials</h3>
++                    <ul>
++                      <li><a href="#">Instagram</a></li>
++                      <li><a href="#">Twitter</a></li>
++                      <li><a href="#">Linktree</a></li>
++                    </ul>
++                  </div>
++                  <p class="copyright">               © 2022</p>
++                </div>
++              </div>
++            </div>
++          </footer>
++        </div>
++      
++      <script type="module" src="../js/volunteer.js"></script>
++  
++  </body>
++  
++  </html>
++            
+\ No newline at end of file
+-- 
+2.34.1.windows.1
+
