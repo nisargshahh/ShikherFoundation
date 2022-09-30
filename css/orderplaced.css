@@ -1,0 +1,30 @@
+@import url("donate.css");
+
+.info{
+    text-align: center;
+
+}
+
+.landing_page{
+    margin-top: 150px;
+    margin-bottom: 150px;
+ }
+ .heading_ty{
+    font-size: 50px;
+    color: #2F3C7E;
+    text-align: center;
+}
+
+h3{
+    font-size: 25px;
+    text-align: center;
+}
+h4{
+    font-size: 25px;
+    text-align: center;
+}
+p{
+    text-align: center;
+    font-size: 25px;
+}
+ 
