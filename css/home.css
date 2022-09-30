@@ -59,4 +59,10 @@ h3{
     margin: 30px;
     padding: 20px;
   }
+
+  a:-webkit-any-link {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
   

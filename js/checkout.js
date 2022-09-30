@@ -106,6 +106,7 @@ $(document).ready(function () {
 
 function snddata(shopcart) {
   window.sndcart = shopcart;
+  console.log(sndcart);
 }
 function senddata() {
   set(ref(db, "Orders/" + fullname.value), {
