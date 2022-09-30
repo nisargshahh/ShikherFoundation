@@ -106,6 +106,7 @@ $(document).ready(function () {
 
 function snddata(shopcart) {
   window.sndcart = shopcart;
+  console.log(sndcart);
 }
 function senddata() {
   set(ref(db, "Orders/" + fullname.value), {
@@ -118,10 +119,11 @@ function senddata() {
   })
     .then(() => {
       alert("data added succesfully");
+      window.location.href="orderplaced.html";
     })
     .catch((error) => {
       alert("unsuccesful , error" + error);
     });
 }
 
-sndbtn.addEventListener("click", senddata);
+sndbtn.addEventListener('click',senddata);

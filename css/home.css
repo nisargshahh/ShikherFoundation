@@ -1,9 +1,10 @@
 @import url("donate.css");
 
 .landing_page{
-    margin-top: 150px;
-    margin-bottom: 150px;
+   margin-top: 150px;
+   margin-bottom: 150px;
 }
+
 
 .heading_shikher{
     font-size: 70px;
@@ -17,6 +18,7 @@ h3{
     margin-top: 150px;
     color: #2F3C7E;
 }
+
 
 * {
     box-sizing: border-box;
@@ -53,4 +55,14 @@ h3{
     0% { transform: translateX(0); }
     100% { transform: translatex(-144vw); }
   }
+  .page-footer{
+    margin: 30px;
+    padding: 20px;
+  }
+
+  a:-webkit-any-link {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
   
