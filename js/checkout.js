@@ -118,10 +118,11 @@ function senddata() {
   })
     .then(() => {
       alert("data added succesfully");
+      window.location.href="orderplaced.html";
     })
     .catch((error) => {
       alert("unsuccesful , error" + error);
     });
 }
 
-sndbtn.addEventListener("click", senddata);
+sndbtn.addEventListener('click',senddata);
