@@ -1,0 +1,11 @@
+a:-webkit-any-link {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  
+  a:-webkit-any-link:hover {
+    color: blue;
+  }
+  

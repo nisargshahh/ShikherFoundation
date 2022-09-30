@@ -1,4 +1,5 @@
 @import url("donate.css");
+@import url("link.css");
 
 .landing_page {
   margin-top: 150px;
@@ -66,8 +67,4 @@ body {
   padding: 20px;
 }
 
-a:-webkit-any-link {
-  color: black;
-  cursor: pointer;
-  text-decoration: none;
-}
+
