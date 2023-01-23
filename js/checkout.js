@@ -31,10 +31,13 @@ var sndbtn = document.getElementById("senddata");
 
 var shopcart = [];
 var sndcart = [];
-$(document).ready(function () {
+$(document).ready(function() {
   outputCart();
+  for (var i = 0; i < shopcart.length ; i++) {
+    shopcart[i].price = (shopcart[i].price / 100).toFixed(2);
+  }
   snddata(shopcart);
-  $("#output").on("change keyup", ".dynqua", function () {
+  $("#output").on("change keyup", ".dynqua", function() {
     var iteminfo = $(this.dataset)[0];
     var itemincart = false;
     var qty = $(this).val();
@@ -42,7 +45,7 @@ $(document).ready(function () {
       qty = 0;
       $(this).val(0);
     }
-    $.each(shopcart, function (index, value) {
+    $.each(shopcart, function(index, value) {
       if (value.id == iteminfo.id) {
         shopcart[index].qty = qty;
         itemincart = true;
@@ -60,7 +63,7 @@ $(document).ready(function () {
     var holderHTML = "";
     var total = 0;
     var itemCnt = 0;
-    $.each(shopcart, function (index, value) {
+    $.each(shopcart, function(index, value) {
       var stotal = value.qty * value.price;
       var a = index + 1;
       total += stotal;
@@ -119,11 +122,11 @@ function senddata() {
   })
     .then(() => {
       alert("data added succesfully");
-      window.location.href="orderplaced.html";
+      window.location.href = "orderplaced.html";
     })
     .catch((error) => {
       alert("unsuccesful , error" + error);
     });
 }
 
-sndbtn.addEventListener('click',senddata);
+sndbtn.addEventListener("click", senddata);

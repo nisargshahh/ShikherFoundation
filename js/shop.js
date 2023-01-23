@@ -42,9 +42,7 @@ $(document).ready(function () {
         value.id +
         " " +
         value.name +
-        "(" +
-        value.s +
-        ")</td><td> " +
+        "</td><td> " +
         formatMoney(value.price) +
         ' </td><td class="text-xs-right"> ' +
         formatMoney(stotal) +
