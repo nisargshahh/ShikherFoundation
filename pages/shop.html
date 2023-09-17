@@ -1,47 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Defines the document type as HTML5 -->
+<html lang="en"> <!-- Start of the HTML document with the English language -->
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" /> <!-- Character encoding for the document -->
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    /> <!-- Sets the viewport for responsive design -->
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Shop</title>
+    <title>Shop</title> <!-- Title of the web page -->
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css"
       integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi"
       crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="../css/shop.css" />
+    /> <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/shop.css" /> <!-- Link to custom CSS -->
   </head>
 
-  <body>
-    <div class="navbar">
+  <body> <!-- Start of the HTML body -->
+
+    <div class="navbar"> <!-- Navigation bar section -->
       <a href="../index.html"
         ><img src="../images/Shikher Foundations Logo 2021.png" class="logo"
       /></a>
-      <nav class="nav">
+      <nav class="nav"> <!-- Navigation menu -->
         <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="about.html">About </a></li>
-          <li><a href="donate.html">Donate </a></li>
-          <li><a href="volunteer.html">Volunteer </a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="shop.html">Shop</a></li>
+          <li><a href="home.html">Home</a></li> <!-- Home page link -->
+          <li><a href="about.html">About </a></li> <!-- About page link -->
+          <li><a href="donate.html">Donate </a></li> <!-- Donate page link -->
+          <li><a href="volunteer.html">Volunteer </a></li> <!-- Volunteer page link -->
+          <li><a href="events.html">Events</a></li> <!-- Events page link -->
+          <li><a href="shop.html">Shop</a></li> <!-- Shop page link -->
         </ul>
       </nav>
-      <div class="menu" id="menu-btn">
+      <div class="menu" id="menu-btn"> <!-- Mobile menu button -->
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
       </div>
     </div>
 
-    <header class="header">
+    <header class="header"> <!-- Header section -->
       <div class="heading">
-        <h1 class="shop-heading">SHOP</h1>
+        <h1 class="shop-heading">SHOP</h1> <!-- Shop heading -->
       </div>
       <!-- <div class="btns-btm">
             <strong><span class="total"></span></strong>
@@ -50,9 +51,11 @@
         </div> -->
     </header>
 
-    <div class="items-list"></div>
+    <div class="items-list"></div> <!-- Container for the list of items -->
 
+    <!-- Product Cards -->
     <div class="row">
+      <!-- Product 1 Card -->
       <div class="col-md-3">
         <div class="card">
           <div class="card-block">
@@ -62,7 +65,7 @@
           </div>
           <div class="card-block">
             <div class="card-text">
-              Product information description why its the best product ever
+              Product information description why it's the best product ever
               <a
                 href="#"
                 class="card-link productItem btn btn-primary"
@@ -75,7 +78,8 @@
           </div>
         </div>
       </div>
-      <div class="col-md-3">
+       <div class="col-md-3">
+      <!-- Repeat similar code for other products -->
         <div class="card">
           <div class="card-block">
             <h3 class="card-title">Product 2</h3>
@@ -415,6 +419,7 @@
 
     <!-- Modals -->
     <div class="modal fade" id="cart" tabindex="-1">
+      <!-- Modal for the shopping cart -->
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -422,6 +427,7 @@
             <h4 class="modal-title">Shopping Cart</h4>
           </div>
           <div class="modal-body">
+            <!-- Table for cart items -->
             <table class="table table-hover">
               <thead class="thead-inverse">
                 <tr>
@@ -435,6 +441,7 @@
             </table>
           </div>
           <div class="modal-footer">
+            <!-- Cart modal footer -->
             <button type="button" class="btn btn-warning" data-dismiss="modal">
               Continue Shopping</button
             ><a href="checkout.html" class="btn btn-primary"
@@ -445,6 +452,7 @@
       </div>
     </div>
 
+    <!-- Checkout Information -->
     <div class="htop">
       <div id="checkoutdiv " class="btn-container">
         <div class="row">
@@ -452,6 +460,7 @@
             (<span class="items text-muted"></span> <small>items</small>)
             <strong><span class="total"></span></strong>
           </div>
+          <!-- Cart summary and checkout buttons -->
           <div class="btns-btm">
             <span
               class="btn btn-success"
@@ -468,12 +477,12 @@
         </div>
       </div>
     </div>
-
     <!-- <div class="btns-btm">
         <strong><span class="total"></span></strong>
         <span class="btn btn-success" data-toggle="modal" data-target="#cart">Cart</span><a
             href="checkout.html" class="btn btn-primary" id="btn-primary-checkout">Checkout</a>
     </div> -->
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script
